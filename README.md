@@ -1,0 +1,2 @@
+# Xamarin.BarCode
+Pruebas Xamarin
