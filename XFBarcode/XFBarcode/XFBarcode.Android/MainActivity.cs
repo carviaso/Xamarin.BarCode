@@ -7,6 +7,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using ZXing.Mobile;
+
 namespace XFBarcode.Droid
 {
     [Activity(Label = "XFBarcode", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -19,6 +21,10 @@ namespace XFBarcode.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            //-->Inicializamos el scanner
+            MobileBarcodeScanner.Initialize(this.Application);
+
             LoadApplication(new App());
         }
     }

@@ -11,7 +11,7 @@ namespace XFBarcode
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new XFBarcode.MainPage();
         }
 
         protected override void OnStart()

@@ -9,16 +9,17 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Xamarin.App.BarCodeTest.Service;
+
+using XFBarcode.Services;
 using Xamarin.Forms;
 using ZXing.Mobile;
 
-[assembly: Dependency(typeof(Xamarin.App.BarCodeTest.Droid.Service.QrScanningService))]
-namespace Xamarin.App.BarCodeTest.Droid.Service
+[assembly: Dependency(typeof(XFBarcode.Droid.Services.QrScanningService))]
+namespace XFBarcode.Droid.Services
 {
-    class QrScanningService : IQrScanningService
+    public class QrScanningService : IQrScanningService
     {
-        async Task<string> IQrScanningService.ScanAsync()
+        public async Task<string> ScanAsync()
         {
             var optionDefault = new MobileBarcodeScanningOptions();
             var optionCustom = new MobileBarcodeScanningOptions();
